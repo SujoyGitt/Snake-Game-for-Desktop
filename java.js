@@ -51,7 +51,6 @@ function gameinging() {
     }, 2000);
   }
     
- 
 
   //if you have eaten the food, increment the score and regenerate th food
   if (snakeArry[0].y === food.y && snakeArry[0].x === food.x) {
@@ -138,3 +137,21 @@ window.addEventListener("keydown", (e) => {
       break;
   }
 });
+inputDir = { x: 0, y: 1 }; //start the game
+
+document.querySelector('.btntop').addEventListener('click',()=>{
+  inputDir.x = 0;
+      inputDir.y = -1;
+})
+document.querySelector('.btndown').addEventListener('click',()=>{
+  inputDir.x = 0;
+  inputDir.y = 1;
+})
+document.querySelector('.btnleft').addEventListener('click',()=>{
+  inputDir.x = -1;
+  inputDir.y = 0;
+})
+document.querySelector('.btnright').addEventListener('click',()=>{
+  inputDir.x = 1;
+  inputDir.y = 0;
+})
